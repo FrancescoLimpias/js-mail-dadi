@@ -1,0 +1,34 @@
+body{
+    height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#throws{
+    width: 160px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+span{
+    background-color: aliceblue;
+    padding: 10px 20px;
+    font-size: xx-large;
+    font-weight: 500;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.throw{
+    width: 30px;
+}
+#output{
+    width: 100%;
+    font-size: medium;
+}
