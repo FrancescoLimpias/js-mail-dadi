@@ -7,23 +7,37 @@ const invitatesEmailList = [
     "nestore.mail"
 ];
 
-// Get user email
-const userEmail = prompt("Inserisci la tua email");
+// References
+const inputMail = document.getElementById("input-email");
+const inputSubmit = document.getElementById("input-submit");
+const output = document.getElementById("output");
 
-// Check for email presence
-let invited = false;
-for (let i = 0; i < invitatesEmailList.length; i++) {
+inputSubmit.addEventListener("click", function () {
 
-    let invitateEmail = invitatesEmailList[i];
-    if (invitateEmail == userEmail) {
-        invited = true;
+    // Get user email
+    const userEmail = inputMail.value;
+
+    // Check for email presence
+    let invited = false;
+    for (let i = 0; i < invitatesEmailList.length; i++) {
+
+        let invitateEmail = invitatesEmailList[i];
+        if (invitateEmail == userEmail) {
+            invited = true;
+        }
+
     }
 
-}
+    // Decide a response
+    let response;
+    if (invited) {
+        response = "Sei invitato!";
+    } else {
+        response = "Non sei invitato";
+    }
 
-// Give a response
-if (invited) {
-    console.log("Sei invitato!");
-} else {
-    console.log("Non sei invitato");
-}
+    // Display reponse
+    output.style.display = "inline-block";
+    output.innerHTML = response;
+    console.log(response);
+});

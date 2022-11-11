@@ -1,0 +1,28 @@
+body{
+    height: 95vh;
+
+    color: snow;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > div{
+    background-color: red;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.474);
+}
+
+#form{
+    margin-bottom: 10px;
+}
+
+#output{
+    border-radius: 10px;
+
+    padding: 3px 8px;
+    background-color: snow;
+    color: black;
+}
